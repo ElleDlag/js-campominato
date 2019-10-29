@@ -4,7 +4,7 @@ var varState;
 var arraySys = [];
 i=0;
 
-// variabili pc
+// variabili user
 var reqN;//chiedo il numero col prompt
 var n =0;//contatore per verificare i tenativi
 var output; //testo variabile
