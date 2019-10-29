@@ -20,22 +20,29 @@ function nRand(){
  //funzione che verifica i doppi
 function chkDouble(thisArr, num){
     if(thisArr.indexOf(num)>=0){
-        thisArr.push(num);
-        thisArr.pop(num);
         return false
-    } else {
-        thisArr.push(num)
-        return true
-        }
+    } else { 
+        return true 
+    }
 }
-
+//funzione che toglie o aggiunge num all'array - specifica
+function resultCheck(thisArr, num){
+    var bool = chkDouble(thisArr, num);
+    if(bool){
+        thisArr.push(num);
+    } else {
+        thisArr.push(num); 
+        thisArr.pop(num);
+    }
+    return bool
+}
 
 /* ESECUZIONE */
 
 // ciclo che crea 16 numeri diversi tra loro
 while (arraySys.length >= 0 && arraySys.length < 16 ){
     num = nRand();
-    chkDouble(arraySys, num);//richiamo funzione che verifica i doppi
+    resultCheck(arraySys, num) //richiamo la funzione che restitusice il risultato dopo il check dei doppi
     i++;
 }
 console.log(arraySys.sort(function(a, b){return a-b})) //trovata su internet
@@ -47,7 +54,7 @@ console.log(arraySys.sort(function(a, b){return a-b})) //trovata su internet
 // ouput tentativi compresi numeri ripetuti
 while (arraySys.indexOf(reqN) < 0 && controller == false) {
         reqN = parseInt(prompt('inserisci numero da 1 a 100'));
-        if(!(chkDouble(arrUsr, reqN))){
+        if(!(resultCheck(arrUsr,reqN))){
             console.log('immetti un numero diverso');
         }
         console.log(arrUsr)
@@ -57,7 +64,6 @@ while (arraySys.indexOf(reqN) < 0 && controller == false) {
         } else {
             n++;
             output = 'ottimo';
-            
         }
         console.log(output, n+1)
 }
