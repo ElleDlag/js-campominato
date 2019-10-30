@@ -47,8 +47,8 @@ while (arraySys.length >= 0 && arraySys.length < 16 ){
 }
 console.log(arraySys.sort(function(a, b){return a-b})) //trovata su internet
 
-// ciclo che inseriemento numero da prompt
-// il numero quindi viene passato all func doubleCheck per verificare se è già stato scritto
+// ciclo che inserisce numero da prompt
+// il numero  viene passato alla func doubleCheck per verificare se è già stato scritto
 // il ciclo si chiude quando il numero da prompt esiste nell' arraySys
 // output messaggio
 // ouput tentativi compresi numeri ripetuti
