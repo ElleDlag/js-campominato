@@ -49,7 +49,7 @@ function addElem(elem, type, classEl) {
 }
 
 /* -- ACTIONS -- */
-//funzione che genera nmeri random da 1 a 100
+//funzione che genera numeri random da 1 a 100
 function nRand() {
     return Math.floor(Math.random() * 100 + 1)
 }
@@ -91,7 +91,7 @@ function offBtn(ele) {
             output = 'ottimo';
             myBtnNum[reqN - 1].firstChild.style.visibility = "hidden"
             var arrayHint = arraySys.slice(0)
-            for (i; i < usrLv; i++) {
+            for (i; i < 5; i++) {
                 var x = nRand()
                 if (arrayHint.indexOf(x) < 0) {
                     myBtnNum[x - 1].firstChild.style.visibility = "hidden";
@@ -107,7 +107,9 @@ function offBtn(ele) {
     console.log("in quanto mosse:" + (click))
 }
 
-//creazione della table
+
+
+// ** CREAZIONE DELLA TABLE **
 for (i = 0; i < 10; i++) {
     addElem("#game .container-fluid", 'div', 'row');
     if ((catchElemAr("#game .row")).length > 0) {
@@ -127,6 +129,7 @@ for (i = 0; i < 10; i++) {
         }
     }
 }
+
 
 
 // ** ESECUZIONE DEL GIOCO **
