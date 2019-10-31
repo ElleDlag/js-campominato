@@ -6,7 +6,7 @@ i=0;
 
 // variabili user
 var reqN;//chiedo il numero col prompt
-var n =0;//contatore per verificare i tenativi
+var n =0;//contatore per verificare i tentativi
 var output; //testo variabile
 var controller = false;
 var arrUsr=[]; // numeri dello user collezionati in un array -- veerificare i doppi con la funzion checkDouble()
@@ -30,9 +30,6 @@ function resultCheck(thisArr, num){
     var bool = chkDouble(thisArr, num);
     if(bool){
         thisArr.push(num);
-    } else {
-        thisArr.push(num); 
-        thisArr.pop(num);
     }
     return bool
 }
